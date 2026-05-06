@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,initial-scale=1">
+
+<title>Wedding Invitation</title>
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500;700&display=swap"
+rel="stylesheet">
+
+<!-- Slick JS -->
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+
+<!-- CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="invitation-wrap">
+
+<div class="hero text-center">
+  <!-- Hiệu ứng hoa bay ở section đầu -->
+    <canvas id="petal-canvas-hero"></canvas>
+
+<div class="date-top">
+20 | 09 | 2026
+</div>
+
+<div class="day-top">
+SUNDAY
+</div>
+
+<div class="oval-photo">
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=900&q=80">
+</div>
+
+<div class="couple-name">
+Ha Young Uk | Thanh Thuy
+</div>
+
+<div class="location-text">
+Thôn Thượng Đáp, Nam Sách, Hải Dương
+</div>
+
+</div>
+
+<section class="section">
+<div class="small-eng">
+INVITATION
+</div>
+
+<h3 class="section-title">
+Lời Ngỏ
+</h3>
+
+<div class="invite-message">
+Bằng tất cả niềm hạnh phúc, chúng con/cháu/em xin trân trọng kính mời quý Bác, Cô, Chú, Anh, Chị và các bạn<br>
+và các bạn đến tham dự lễ thành hôn và chung vui cùng gia đình trong ngày trọng đại.<br><br>
+
+Sự hiện diện và lời chúc phúc của mọi người là niềm vinh hạnh và hạnh phúc lớn lao đối với chúng con/cháu/em.<br>
+Rất mong được đón tiếp mọi người trong khoảnh khắc ý nghĩa này.<br>
+</div>
+
+<div class="parents">
+Trưởng nữ: THANH THÙY<br>
+Út nam: YOUNG UK
+</div>
+
+</section>
+
+<section class="section wedding-day">
+
+<div class="small-eng">
+THE WEDDING DAY
+</div>
+
+<div class="wedding-date-big">
+08:30, Ngày 20/09/2026
+</div>
+
+<div class="calendar">
+
+<div class="week">Sun</div>
+<div class="week">Mon</div>
+<div class="week">Tue</div>
+<div class="week">Wed</div>
+<div class="week">Thu</div>
+<div class="week">Fri</div>
+<div class="week">Sat</div>
+
+<div></div><div></div>1<div>2</div>3<div>4</div>
+<div>5</div><div>6</div><div>7</div>
+
+<div>8</div><div>9</div><div>10</div>
+<div>11</div><div>12</div><div>13</div><div>14</div>
+
+<div>15</div><div>16</div><div>17</div>
+<div>18</div><div>19</div>
+<div class="active-day">20</div>
+<div>21</div>
+
+<div>22</div><div>23</div><div>24</div>
+<div>25</div><div>26</div>
+<div>27</div>
+<div>28</div>
+<div>29</div>
+<div>30</div>
+<!-- <div>28</div>
+<div>29</div>
+<div>30</div>
+<div>31</div> -->
+
+</div>
+
+</section>
+
+<!-- album ảnh cưới---------------------------------------------------------------------------------------- -->
+<section class="section">
+
+<div class="small-eng">
+GALLERY
+</div>
+
+<h3 class="section-title">
+Album Ảnh
+</h3>
+
+<div class="gallery-scroll gallery-slider">
+  <div><img src="https://images.unsplash.com/photo-1525258946800-98cfd641d0de?auto=format&fit=crop&w=900&q=80"></div>
+  <div><img src="hinhanh/img1.jpg"></div>
+  <div><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"></div>
+  <div><img src="https://images.unsplash.com/photo-1529636798458-92182e662485?auto=format&fit=crop&w=900&q=80"></div>
+  <div><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=900&q=80"></div>
+</div>
+
+</section>
+<!-- album ảnh cưới.END -->
+
+<!-- địa chỉ nhà------------------------------------------------------------------------------------------------- -->
+<section class="section map-section">
+
+<div class="small-eng">
+LOCATION
+</div>
+
+<h3 class="section-title">
+Địa chỉ
+</h3>
+
+<div>
+Tại gia, Xóm 1, thông Thượng Đáp<br>
+ Nam Sách, Hải Phòng
+</div>
+
+<div class="map-box mt-4">
+<iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3724.8586867452905!2d106.32481107525571!3d20.99830098064339!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjDCsDU5JzUzLjkiTiAxMDbCsDE5JzM4LjYiRQ!5e0!3m2!1svi!2skr!4v1778041796770!5m2!1svi!2skr"
+ width="350"
+ height="450"
+ style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div class="info-box">
+
+<!-- <div class="info-title">
+Phương tiện di chuyển
+</div>
+버스 1-3, 5, 5-2, 53-7 -->
+
+<div class="info-title">
+Nơi đậu xe
+</div>
+
+Tại gia
+
+</div>
+
+</section>
+<!-- địa chỉ nhà.END -->
+
+<section class="section">
+
+<div class="small-eng">
+INFORMATION
+</div>
+
+<h3 class="section-title">
+Chúc mừng
+</h3>
+
+<div class="info-message">
+Trân trọng đón nhận yêu thương và lời chúc phúc!<br>
+</div>
+
+<!-- tài khoản-------------------------------------------------- -->
+<div id="accordion">
+
+<!-- TK cô dâu------------------------------------------ -->
+<div class="card">
+<div class="card-header">
+<button
+class="btn btn-link"
+data-toggle="collapse"
+data-target="#groom">
+Tài khoản cô dâu
+</button>
+</div>
+
+<div id="groom"
+class="collapse"
+data-parent="#accordion">
+
+<div class="card-body">
+VietinBank<br>
+102882737146<br>
+NGUYEN THI THANH THUY<br>
+<img class="ngan_hang" src="hinhanh/ngan_hang.jpg" alt="tài khoản ngân hàng">
+</div>
+
+</div>
+</div>
+<!--TK cô dâu.END  -->
+
+<!-- TK chú rể------------------------------------------ -->
+<div class="card">
+<div class="card-header">
+<button
+class="btn btn-link"
+data-toggle="collapse"
+data-target="#bride">
+Tài khoản chú rể
+</button>
+</div>
+
+<div id="bride"
+class="collapse"
+data-parent="#accordion">
+
+<div class="card-body">
+<!-- 신한은행 987654321<br>
+김희서 -->
+</div>
+
+</div>
+</div>
+<!-- TK chú rể.END -->
+</div>
+<!-- tài khoản.End -->
+
+</section>
+
+<div class="footer-space"></div>
+
+</div>
+
+<!-- hiệu ứng cánh hoa đào rơi cho toàn trang------------------------>
+ <!-- <canvas id="petal-canvas"></canvas> -->
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
