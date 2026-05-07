@@ -4,6 +4,40 @@ background:#f8f5f4;
 font-family:'Noto Serif KR',serif;
 color:#666;
 }
+/* MƯợt như thước phim toàn trang ------------------------------ */
+html{
+  scroll-behavior:smooth;
+}
+
+
+/* Nút nhạc------------------------------------------------------ */
+#music-toggle{
+  position:fixed;
+
+  top:20px;          /* đưa lên trên */
+  left:calc(51% - 210px); 
+  /* bám mép phải invitation-wrap */
+
+  width:48px;
+  height:48px;
+
+  border:none;
+  border-radius:50%;
+
+  background:rgba(255,182,193,0.45);
+  color:white;
+
+  font-size:18px;
+  z-index:9999;
+
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* nút nhạc----- */
+
 
 .invitation-wrap{
 max-width:420px;
@@ -16,6 +50,32 @@ box-shadow:0 0 15px rgba(0,0,0,.05);
 padding:55px 30px;
 text-align:center;
 }
+
+/* Thêm hiệu ứng cho section để chạy mượt như phim mờ dần. Chưa dùng tới--------- */
+/* .section{
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    filter 0.8s ease;
+}
+
+.section{
+  opacity:0;
+  transform:translateY(60px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+
+
+.section.show{
+  opacity:1;
+  transform:translateY(0);
+} */
+ 
+
+/* Thêm hiệu ứng để mượt như phim-- */
 
 .small-eng{
 font-size:11px;
@@ -92,6 +152,7 @@ margin-top:18px;
 line-height:2;
 }
 
+/* Phần lời ngỏ------------------------------------------------ */
 .invite-message{
 line-height:2.3;
 font-size:16px;
@@ -101,7 +162,54 @@ font-size:16px;
 margin-top:50px;
 line-height:2;
 color: #7c6975;
+overflow:hidden; /* mới thêm*/
 }
+.parents .anh_co_dau, .anh_chu_re{
+width: 250px;
+margin: 20px;
+}
+
+/* ảnh chung */
+.parents img{
+    width:250px;
+    margin:20px;
+
+    opacity:0;
+
+    transition:
+    transform 1.5s ease,
+    opacity 1.5s ease;
+}
+/* Hiệu ứng room nhẹ chạy lên */
+ /* .parents img{
+  opacity:0;
+  transform:translateY(40px) scale(0.95);
+
+  transition:all 1.4s ease;
+}
+
+.parents.show img{
+  opacity:1;
+  transform:translateY(0) scale(1);
+} */
+
+/* cô dâu nằm bên trái ngoài màn hình */
+.slide-left{
+    transform:translateX(-200px);
+}
+
+/* chú rể nằm bên phải ngoài màn hình */
+.slide-right{
+    transform:translateX(200px);
+}
+
+/* khi section xuất hiện */
+.parents.show .slide-left,
+.parents.show .slide-right{
+    opacity:1;
+    transform:translateX(0);
+}
+/* Phần lời ngỏ----- */
 
 .wedding-day{
 background:#fbf8f8;

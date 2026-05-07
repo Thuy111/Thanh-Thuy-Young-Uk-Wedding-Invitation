@@ -1,5 +1,38 @@
 $(function(){
 
+
+ // Nhạc nền-------------------------------------------------
+const music = document.getElementById("bg-music");
+const btn = document.getElementById("music-toggle");
+
+music.volume = 0.3;
+
+// khi người dùng chạm lần đầu ở bất kỳ đâu
+document.addEventListener("click", () => {
+
+  music.muted = false;
+  music.play();
+
+}, { once: true });
+
+// nút bật/tắt nhạc
+btn.addEventListener("click", () => {
+
+  if (music.paused) {
+
+    music.play();
+    btn.innerHTML = "🔊";
+
+  } else {
+
+    music.pause();
+    btn.innerHTML = "🔇";
+
+  }
+
+});
+// Nhạc nền-----
+
 // cuộn mượt khi bấn link trong trang
 $("a[href^='#']").click(function(e){
 
@@ -11,15 +44,14 @@ scrollTop:$($(this).attr("href")).offset().top
 
 });
 
-
-//click ảnh sẽ hiện ra ảnh to
-$(".gallery-scroll img").click(function(){
+// Click ảnh cá nhân sẽ hiện to ra
+$(".parents img").click(function(){
 
 let src=$(this).attr("src");
 
 let modal=`<div class="modal fade" id="photoModal">
  <div class="modal-dialog modal-dialog-centered"> <div class="modal-content border-0 bg-transparent"> 
- <img src="${src}" style="width:100%;border-radius:10px;"> </div> </div> </div>`; //bo góc ảnh
+ <img src="${src}" style="width:100%;border-radius:5px;"> </div> </div> </div>`; //bo góc ảnh
 
 $("body").append(modal);
 
@@ -31,7 +63,29 @@ $(this).remove();
 
 });
 
-//slider cho hình ảnh album
+
+//click ảnh trong album sẽ hiện ra ảnh to
+$(".gallery-scroll img").click(function(){
+
+let src=$(this).attr("src");
+
+let modal=`<div class="modal fade" id="photoModal">
+ <div class="modal-dialog modal-dialog-centered"> <div class="modal-content border-0 bg-transparent"> 
+ <img src="${src}" style="width:100%;border-radius:5px;"> </div> </div> </div>`; //bo góc ảnh
+
+$("body").append(modal);
+
+$("#photoModal").modal("show");
+
+$("#photoModal").on("hidden.bs.modal",function(){
+$(this).remove();
+});
+
+});
+
+
+
+//slider cho hình ảnh album-------------------------------------------
 // KHỞI TẠO SLICK
 $('.gallery-slider').slick({
   dots: true,
@@ -49,7 +103,7 @@ $('.gallery-slider').slick({
 
 });
 
-// hiệu ứng cuộn màn hình
+// hiệu ứng cuộn màn hình=============================================================
 document.addEventListener("DOMContentLoaded", function () {
 
   const sections = document.querySelectorAll(".section");
@@ -196,4 +250,47 @@ function animate() {
 animate();
 // ==================================
 
+// Ảnh cô dâu chú rể hiện ra khi thanh cuộn đến hình chú rể---------------------------------------------------------
+document.addEventListener("DOMContentLoaded", function () {
+
+  const parentBox = document.querySelector(".parents");
+
+  const parentObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        parentBox.classList.add("show");
+
+      }
+
+    });
+
+  }, {
+    threshold: 0.7
+  });
+
+  parentObserver.observe(parentBox);
+
+});
+// const parentBox = document.querySelector(".parents");
+
+// const parentObserver = new IntersectionObserver((entries) => {
+
+//   entries.forEach(entry => {
+
+//     if (entry.isIntersecting) {
+
+//       parentBox.classList.add("show");
+
+//     }
+
+//   });
+
+// }, {
+//   threshold: 0.7
+// });
+
+// parentObserver.observe(parentBox);
 
