@@ -206,24 +206,7 @@ margin:auto;
 .gallery-scroll{
   overflow:hidden;
 }
-/* Để hình chiếm chọn ô mà không để lại khoảng trống */
-.slick-slider,
-.slick-list,
-.slick-track{
-    width:100%;
 
-}
-
-.slick-slide{
-    overflow:hidden;
-}
-
-.slick-slide img{
-    width:100%;
-    height:100vh;
-    object-fit:cover;
-    display:block;
-}
 /* album. END------------------------- */
 
 /* map------------------------------------------------------------------- */
@@ -307,8 +290,8 @@ width:250px;
 height:360px;
 }
 .gallery-scroll img{
-width:220px;
-height:290px;
+width:100%;
+/* height:290px; */
 }
 }
 
