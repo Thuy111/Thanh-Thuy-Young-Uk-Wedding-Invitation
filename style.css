@@ -177,8 +177,8 @@ margin: 20px;
     opacity:0;
 
     transition:
-    transform 1.5s ease,
-    opacity 1.5s ease;
+    transform 1.2s ease,
+    opacity 1.2s ease;
 }
 /* Hiệu ứng room nhẹ chạy lên */
  /* .parents img{
