@@ -211,6 +211,7 @@ margin:auto;
 .slick-list,
 .slick-track{
     width:100%;
+
 }
 
 .slick-slide{
@@ -219,6 +220,7 @@ margin:auto;
 
 .slick-slide img{
     width:100%;
+    height:100vh;
     object-fit:cover;
     display:block;
 }
