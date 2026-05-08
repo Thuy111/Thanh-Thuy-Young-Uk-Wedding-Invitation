@@ -274,23 +274,33 @@ document.addEventListener("DOMContentLoaded", function () {
   parentObserver.observe(parentBox);
 
 });
-// const parentBox = document.querySelector(".parents");
 
-// const parentObserver = new IntersectionObserver((entries) => {
 
-//   entries.forEach(entry => {
+// HÌnh bàn tay-------------------------------------------------------------------
+// Opening Screen
+const openingScreen = document.getElementById("opening-screen");
+const mainContent = document.getElementById("main-content");
 
-//     if (entry.isIntersecting) {
+openingScreen.addEventListener("click", () => {
 
-//       parentBox.classList.add("show");
+  openingScreen.style.opacity = "0";
 
-//     }
+  setTimeout(() => {
 
-//   });
+    openingScreen.style.display = "none";
 
-// }, {
-//   threshold: 0.7
-// });
+    mainContent.style.display = "block";
 
-// parentObserver.observe(parentBox);
+    // bật nhạc
+    const music = document.getElementById("bg-music");
 
+    if(music){
+
+      music.muted = false;
+      music.play();
+
+    }
+
+  }, 1200);
+
+});
