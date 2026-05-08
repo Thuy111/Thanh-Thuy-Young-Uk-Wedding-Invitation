@@ -278,10 +278,45 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // HÌnh bàn tay-------------------------------------------------------------------
 // Opening Screen
+// const openingScreen = document.getElementById("opening-screen");
+// const mainContent = document.getElementById("main-content");
+
+// openingScreen.addEventListener("click", () => {
+
+//   openingScreen.style.opacity = "0";
+
+//   setTimeout(() => {
+
+//     openingScreen.style.display = "none";
+
+//     mainContent.style.display = "block";
+
+//     // bật nhạc
+//     const music = document.getElementById("bg-music");
+
+//     if(music){
+
+//       music.muted = false;
+//       music.play();
+
+//     }
+
+//   }, 1200);
+
+// });
+
 const openingScreen = document.getElementById("opening-screen");
 const mainContent = document.getElementById("main-content");
 
-openingScreen.addEventListener("click", () => {
+let opened = false;
+
+// function mở thiệp
+function openInvitation(){
+
+  // tránh chạy nhiều lần
+  if(opened) return;
+
+  opened = true;
 
   openingScreen.style.opacity = "0";
 
@@ -297,10 +332,20 @@ openingScreen.addEventListener("click", () => {
     if(music){
 
       music.muted = false;
+
       music.play();
 
     }
 
   }, 1200);
 
-});
+}
+
+// click mở
+openingScreen.addEventListener("click", openInvitation);
+
+// vuốt / lướt mở trên điện thoại
+window.addEventListener("touchmove", openInvitation, { once:true });
+
+// cuộn chuột trên máy tính
+window.addEventListener("wheel", openInvitation, { once:true });
