@@ -441,12 +441,17 @@ width:100%;
 
 /* ảnh bàn tay */
 .opening-hand{
+  position:absolute;
+
+  top:0;
+  left:50%;
+
+  transform:translateX(-50%);
+
   width:500px;
   max-width:120vw;
 
   opacity:.95;
-
-  /* margin-top:-120px; */
 }
 
 /* ngày */
