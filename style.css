@@ -446,14 +446,14 @@ width:100%;
 
   opacity:.95;
 
-  margin-top:-120px;
+  /* margin-top:-120px; */
 }
 
 /* ngày */
 .opening-date{
   position:absolute;
 
-  top:70%;
+  top:67%;
 
   left:50%;
   transform:translateX(-50%);
@@ -470,8 +470,10 @@ width:100%;
 /* tên */
 .opening-kor{
   position:absolute;
+  width: 100%;
+  text-align: center;
 
-  top:75%;
+  top:73%;
 
   left:50%;
   transform:translateX(-50%);
@@ -480,7 +482,7 @@ width:100%;
   font-family: "Cause", cursive;
   font-style: normal;
 
-  font-size:25px;
+  font-size:23px;
 
   line-height:1.35;
 
@@ -489,14 +491,14 @@ width:100%;
 /* Dòng we are getting Married--------------------------- */
 .opening-text{
   position:absolute;
-  top:90%;
+  top:83%;
   left:50%;
   transform:translateX(-50%);
 
   width:100%;
   text-align:center;
 
-  font-size:42px;
+  font-size:38px;
   font-family:'Great Vibes', cursive;
   color:#7c6975;
 
