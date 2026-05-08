@@ -415,27 +415,6 @@ width:100%;
 
 }
 
-/* phần giữa */
-/* .opening-inner{
-  position:relative;
-
-  width:100%;
-  height:100vh;
-
-  display:flex;
-  justify-content:center;
-  align-items:center;
-
-  animation:openingFade 2s ease;
-} */
- .opening-inner{
-  position:relative;
-
-  width:100%;
-  height:100vh;
-
-  animation:openingFade 2s ease;
-}
 
 /* ảnh bàn tay */
 .opening-hand{
