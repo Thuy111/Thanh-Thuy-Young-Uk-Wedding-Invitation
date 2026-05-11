@@ -246,7 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Hình ảnh bàn tay=============================================================
+// Hình ảnh bìa =============================================================
 const openingScreen = document.getElementById("opening-screen");
 const mainContent = document.getElementById("main-content");
 
@@ -300,3 +300,30 @@ window.addEventListener("touchmove", openInvitation, { once:true });
 
 // cuộn chuột trên máy tính
 window.addEventListener("wheel", openInvitation, { once:true });
+
+
+// Phong bì ===============================================
+const envelope = document.getElementById("envelope");
+
+function openEnvelope() {
+  envelope.classList.add("open");
+}
+
+function closeEnvelope() {
+  envelope.classList.remove("open");
+}
+
+/* 🔁 vòng lặp tự động */
+function autoAnimation() {
+  openEnvelope();
+
+  setTimeout(() => {
+    closeEnvelope();
+  }, 1000); // giữ mở 2 giây
+}
+
+/* chạy lần đầu */
+autoAnimation();
+
+/* lặp vô hạn */
+setInterval(autoAnimation, 3000);
