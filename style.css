@@ -1,378 +1,12 @@
 body{
 margin:0;
 background:#f8f5f4;
-font-family:'Noto Serif KR',serif;
+font-family:"Playpen Sans", cursive;
 color:#666;
 }
 /* MƯợt như thước phim toàn trang ------------------------------ */
 html{
   scroll-behavior:smooth;
-}
-
-
-/* Nút nhạc------------------------------------------------------ */
-#music-toggle{
-  position:fixed;
-
-  top:20px;          /* đưa lên trên */
-  left:calc(51% - 210px); 
-  /* bám mép phải invitation-wrap */
-
-  width:48px;
-  height:48px;
-
-  border:none;
-  border-radius:50%;
-
-  background:rgba(255,182,193,0.45);
-  color:white;
-
-  font-size:18px;
-  z-index:9999;
-
-  box-shadow:0 4px 10px rgba(0,0,0,.15);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-/* nút nhạc----- */
-
-
-.invitation-wrap{
-max-width:420px;
-margin:auto;
-background:#fff;
-box-shadow:0 0 15px rgba(0,0,0,.05);
-}
-
-.section{
-padding:55px 30px;
-text-align:center;
-}
-
-
-.small-eng{
-font-size:11px;
-letter-spacing:4px;
-color:#d5bcc8;
-margin-bottom:8px;
-}
-
-.section-title{
-font-size:22px;
-margin-bottom:30px;
-color:#555;
-}
-
-.date-top{
-padding-top:20px;
-font-size:15px;
-letter-spacing:4px;
-}
-
-.day-top{
-margin-top:8px;
-margin-bottom: 40px;
-font-size:12px;
-letter-spacing:3px;
-color:#999;
-}
-
-/* Hoa nằm 2 cạnh section đầu----------------------------------- */
-/* .hero{
-padding:35px 20px 60px;
-position:relative;
-} */
-
-/* .hero:before{
-content:"✿";
-position:absolute;
-right:25px;
-top:20px;
-font-size:28px;
-color:#e4c8d5;
-}
-
-.hero:after{
-content:"✿";
-position:absolute;
-left:25px;
-bottom:30px;
-font-size:28px;
-color:#e4c8d5;
-} */
-/* Hoa nằm 2 cạnh section đầu----
-
-
-/* Phần lời ngỏ------------------------------------------------ */
-.invite-message{
-line-height:2.3;
-font-size:16px;
-}
-
-.parents{
-margin-top:50px;
-line-height:2;
-color: #7c6975;
-overflow:hidden; /* mới thêm*/
-}
-.parents .anh_co_dau, .anh_chu_re{
-width: 250px;
-margin: 20px;
-}
-
-/* ảnh chung */
-.parents img{
-    width:250px;
-    margin:20px;
-
-    opacity:0;
-
-    transition:
-    transform 1.2s ease,
-    opacity 1.2s ease;
-}
-
-
-/* cô dâu nằm bên trái ngoài màn hình */
-.slide-left{
-    transform:translateX(-200px);
-}
-
-/* chú rể nằm bên phải ngoài màn hình */
-.slide-right{
-    transform:translateX(200px);
-}
-
-/* khi section xuất hiện */
-.parents.show .slide-left,
-.parents.show .slide-right{
-    opacity:1;
-    transform:translateX(0);
-}
-/* Phần lời ngỏ----- */
-
-.wedding-day{
-background:#fbf8f8;
-}
-
-.wedding-date-big{
-font-size:26px;
-color:#7c6975;
-}
-
-.calendar{
-display:grid;
-grid-template-columns:repeat(7,1fr);
-grid-row-gap:18px;
-margin-top:30px;
-}
-
-.week{
-font-weight:600;
-color:#999;
-}
-
-.active-day{
-width:32px;
-height:32px;
-border-radius:50%;
-background:#d7bfd0;
-color:#fff;
-display:flex;
-justify-content:center;
-align-items:center;
-margin:auto;
-}
-
-/* hiệu ứng cho ngày cưới */
-.active-day {
-  position: relative;
-}
-
-.active-day {
-  position: relative;
-}
-
-.active-day::after {
-  content: "✨";
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  font-size: 14px;
-  animation: sparkle 1.2s infinite;
-}
-
-@keyframes sparkle {
-  0% { opacity: 0; transform: scale(0.5); }
-  50% { opacity: 1; transform: scale(1.2); }
-  100% { opacity: 0; transform: scale(0.5); }
-}
-/* album----------------------------------------------------------------------------------------- */
-
-.gallery-scroll img{
-  width:100%;
-  height:400px;
-  object-fit:cover;
-  border-radius:12px;
-}
-/* vị trí mũi tên */
-.custom-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: none;
-
-  background: rgba(0,0,0,0.4);
-  color: #fff;
-  font-size: 20px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* trái */
-.slick-prev {
-  left: 10px;
-}
-
-/* phải */
-.slick-next {
-  right: 10px;
-}
-
-/* hover đẹp hơn */
-.custom-arrow:hover {
-  background: rgba(0,0,0,0.7);
-}
-
-.gallery-scroll{
-  overflow:hidden;
-}
-
-/* album. END------------------------- */
-
-/* map------------------------------------------------------------------- */
-.map-section{
-background:#faf7f7;
-}
-.map-box{
-    width:100%;
-    overflow:hidden;
-    border-radius:20px;
-}
-
-.map-box iframe{
-    width:100%;
-    height:450px;
-    border:0;
-    display:block;
-}
-
-/* map.END-------------- */
-
-
-.info-box{
-text-align:left;
-line-height:2;
-margin-top:25px;
-}
-
-.info-title{
-color:#cfacc1;
-margin-top:20px;
-font-weight:600;
-}
-
-.info-message{
-line-height:2;
-margin-bottom:40px;
-}
-
-.card{
-border-radius:18px !important;
-border:1px solid #dbc5d1;
-margin-bottom:18px;
-overflow:hidden;
-}
-
-.card-header{
-padding:0;
-border:none;
-background:#fff;
-}
-
-.btn-link{
-width:100%;
-padding:18px;
-color:#866f7d;
-text-decoration:none;
-}
-
-.btn-link:hover{
-text-decoration:none;
-color: white;
-background-color: #dbc5d1;
-}
-
-.card-body{
-background:#fcf8fa;
-line-height:2;
-}
-.ngan_hang{
-  width: 100px;
-}
-
-.footer-space{
-height:60px;
-}
-
-@media(max-width:390px){
-.oval-photo{
-width:250px;
-height:360px;
-}
-.gallery-scroll img{
-width:100%;
-/* height:290px; */
-}
-}
-
-/* Hiệu ứng cuộn màn hình------------------------------------------------------ */
-.section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-/* khi hiện ra */
-.section.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-
-/* Hiệu ứng hoa rơi trong section đầu---------------- */
-.hero {
-  position: relative;
-  overflow: hidden; /* 👈 rất quan trọng */
-}
-
-/* canvas chỉ nằm trong hero */
-#petal-canvas-hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
 }
 
 /*  Hình bàn tay ----------------------------------------------------------- */
@@ -478,6 +112,9 @@ width:100%;
 
   z-index:5;
 }
+.hoa{
+  color: #8ACCD5;
+}
 /* Dòng we are getting Married--------------------------- */
 .opening-text{
   position:absolute;
@@ -490,7 +127,7 @@ width:100%;
 
   font-size:38px;
   font-family:'Great Vibes', cursive;
-  color:#7c6975;
+  color:#FF90BB;
 
   letter-spacing:-1px;
 
@@ -550,4 +187,456 @@ width:100%;
     filter:blur(0);
   }
 }
+/* ================================================== */
+/* Hình bàn tay---- */
+
+
+/* Màu nền cho từng section======================================= */
+.mau-nen, .map-section{
+  background-color: #F8F8E1;
+}
+
+
+
+
+
+
+
+
+/* Nút nhạc------------------------------------------------------ */
+#music-toggle{
+  position:fixed;
+
+  top:20px;          /* đưa lên trên */
+  left:calc(51% - 210px); 
+  /* bám mép phải invitation-wrap */
+
+  width:48px;
+  height:48px;
+
+  border:none;
+  border-radius:50%;
+
+  background:rgba(255,182,193,0.45);
+  color:white;
+
+  font-size:18px;
+  z-index:9999;
+
+  box-shadow:0 4px 10px rgba(0,0,0,.15);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+/* nút nhạc----- */
+
+
+.invitation-wrap{
+max-width:420px;
+margin:auto;
+background:#fff;
+box-shadow:0 0 15px rgba(0,0,0,.05);
+}
+
+.section{
+padding:55px 30px;
+text-align:center;
+}
+
+
+.small-eng{
+font-size:20px;
+letter-spacing:2px;
+color:#FF90BB;
+margin-bottom:8px;
+}
+
+.section-title{
+font-size:22px;
+margin-bottom:30px;
+color:#555;
+font-family:'Great Vibes', cursive;
+}
+
+.date-top{
+padding-top:20px;
+font-size:15px;
+letter-spacing:4px;
+}
+
+.day-top{
+margin-top:8px;
+margin-bottom: 40px;
+font-size:12px;
+letter-spacing:3px;
+color:#999;
+}
+
+.couple-name{
+ font-family:'Great Vibes', cursive;
+}
+
+/* Hiệu ứng hoa rơi trong section đầu---------------- */
+.hero {
+  position: relative;
+  overflow: hidden; /* 👈 rất quan trọng */
+}
+
+/* canvas chỉ nằm trong hero */
+#petal-canvas-hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+/*Hiệu ứng hoa rơi trong section đầu-- */
+
+/* Hình section đầu------------------------------------------ */
+/* ảnh lớn phía trên */
+.hero-img{
+  width:100%;
+  overflow:hidden;
+  border:1px solid #dbc5d1;
+}
+
+.hero-img img{
+  width:100%;
+  height:100%;
+  border-radius: 15px;
+  object-fit:cover;
+  display:block;
+}
+
+
+/* Phần lời ngỏ------------------------------------------------ */
+.invite-message{
+line-height:2.3;
+font-size:16px;
+}
+
+
+.parents{
+line-height:2;
+/* color: #7c6975; */
+overflow:hidden; /* mới thêm*/
+color: #FF90BB;
+font-weight: bold;
+}
+.anh_co_dau, .anh_chu_re{
+width: 150px;
+}
+
+/* ảnh chung */
+.parents img{
+    opacity:0;
+    transition:
+    transform 1.2s ease,
+    opacity 1.2s ease;
+    margin-top: 20px;
+}
+
+
+/* cô dâu nằm bên trái ngoài màn hình */
+.slide-left{
+    transform:translateX(-200px);
+}
+
+/* chú rể nằm bên phải ngoài màn hình */
+.slide-right{
+    transform:translateX(200px);
+}
+
+/* khi section xuất hiện */
+.parents.show .slide-left,
+.parents.show .slide-right{
+    opacity:1;
+    transform:translateX(0);
+}
+/* Phần lời ngỏ----- */
+
+/* Ngày cưới============================================== */
+ .wedding-day{
+  border: 2px solid#FF90BB;
+}
+
+.wedding-date-big{
+font-size:20px;
+color:#7c6975;
+}
+
+.calendar{
+display:grid;
+grid-template-columns:repeat(7,1fr);
+grid-row-gap:18px;
+margin-top:30px;
+}
+
+.week{
+font-weight:600;
+color:#999;
+}
+
+
+ /* Bo góc trái tim cho ngày cưới */
+.active-day{
+
+  position:relative;
+
+  width:38px;
+  height:38px;
+
+  margin:auto;
+
+  color:white;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  font-size:15px;
+  font-weight:600;
+
+  z-index:2;
+}
+
+/* tạo trái tim */
+.active-day::before,
+.active-day::after{
+
+  content:"";
+
+  position:absolute;
+
+  width:20px;
+  height:32px;
+
+  background:#ff2e63;
+
+  border-radius:20px 20px 0 0;
+}
+
+/* nửa trái */
+.active-day::before{
+
+  left:19px;
+
+  transform:
+    rotate(-45deg);
+
+  transform-origin:0 100%;
+}
+
+/* nửa phải */
+.active-day::after{
+
+  left:0;
+
+  transform:
+    rotate(45deg);
+
+  transform-origin:100% 100%;
+}
+
+/* số ngày nổi lên trên tim */
+.active-day{
+
+  position:relative;
+}
+
+.active-day span{
+
+  position:relative;
+
+  z-index:5;
+}
+/* trái tim đập */
+.active-day{
+
+  animation:heartBeat 1.4s ease-in-out infinite;
+}
+
+/* hiệu ứng phập phồng */
+@keyframes heartBeat{
+
+  0%{
+    transform:scale(1);
+  }
+
+  15%{
+    transform:scale(1.15);
+  }
+
+  30%{
+    transform:scale(1);
+  }
+
+  45%{
+    transform:scale(1.12);
+  }
+
+  60%{
+    transform:scale(1);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+/* album----------------------------------------------------------------------------------------- */
+/* ======================================================
+   GALLERY
+====================================================== */
+
+/* ảnh lớn */
+.gallery-main{
+  margin-bottom:25px;
+}
+
+.gallery-main img{
+
+  width:100%;
+  height:430px;
+
+  object-fit:cover;
+
+  border-radius:0;
+
+  display:block;
+}
+
+
+/* thumbnail */
+.gallery-thumb{
+  margin:0 -6px;
+}
+
+.gallery-thumb .slick-slide{
+  padding:0 6px;
+}
+
+.gallery-thumb img{
+
+  width:100%;
+  height:90px;
+
+  object-fit:cover;
+
+  cursor:pointer;
+
+  opacity:.45;
+
+  transition:.35s ease;
+}
+
+
+/* ảnh active */
+.gallery-thumb .slick-current img{
+
+  opacity:1;
+
+  transform:scale(1.02);
+}
+
+
+/* bỏ viền xanh khi click */
+.gallery-thumb .slick-slide{
+  outline:none;
+}
+
+.gallery-thumb .slick-slide div{
+  outline:none;
+}
+/* album. END------------------------- */
+
+/* map------------------------------------------------------------------- */
+.map-box{
+    width:100%;
+    overflow:hidden;
+    border-radius:20px;
+}
+
+.map-box iframe{
+    width:100%;
+    height:450px;
+    border:0;
+    display:block;
+}
+
+/* map.END-------------- */
+
+
+.info-box{
+text-align:left;
+line-height:2;
+margin-top:25px;
+}
+
+.info-title{
+color:#8ACCD5;
+margin-top:20px;
+font-weight:600;
+}
+
+.info-message{
+line-height:2;
+margin-bottom:40px;
+}
+
+.card{
+border-radius:18px !important;
+border:1px solid #dbc5d1;
+margin-bottom:18px;
+overflow:hidden;
+}
+
+.card-header{
+padding:0;
+border:none;
+background:#fff;
+}
+
+.btn-link{
+width:100%;
+padding:18px;
+color:#866f7d;
+text-decoration:none;
+}
+
+.btn-link:hover{
+text-decoration:none;
+color: white;
+background-color: #FFC1DA;
+}
+
+.card-body{
+background:#fcf8fa;
+line-height:2;
+}
+.ngan_hang{
+  width: 100px;
+}
+
+.footer-space{
+height:60px;
+}
+
+
+
+/* Hiệu ứng cuộn màn hình------------------------------------------------------ */
+.section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* khi hiện ra */
+.section.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 

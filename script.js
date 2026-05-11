@@ -64,44 +64,75 @@ $(this).remove();
 });
 
 
-//click ảnh trong album sẽ hiện ra ảnh to
-$(".gallery-scroll img").click(function(){
-
-let src=$(this).attr("src");
-
-let modal=`<div class="modal fade" id="photoModal">
- <div class="modal-dialog modal-dialog-centered"> <div class="modal-content border-0 bg-transparent"> 
- <img src="${src}" style="width:100%;border-radius:5px;"> </div> </div> </div>`; //bo góc ảnh
-
-$("body").append(modal);
-
-$("#photoModal").modal("show");
-
-$("#photoModal").on("hidden.bs.modal",function(){
-$(this).remove();
-});
 
 });
 
+// Dành cho album ảnh===========================================
+function initGallery(){
 
+  $('.gallery-main').slick({
 
-//slider cho hình ảnh album-------------------------------------------
-// KHỞI TẠO SLICK
-$('.gallery-slider').slick({
-  dots: true,
-  arrows: true, // 👈 bật mũi tên
-  infinite: true,
-  speed: 500,
-  fade: false, // 👉 nên tắt fade để chuyển mượt kiểu trượt
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: false,
+    slidesToShow:1,
+    slidesToScroll:1,
 
-  prevArrow: '<button class="slick-prev custom-arrow"></button>',
-  nextArrow: '<button class="slick-next custom-arrow"></button>'
+    arrows:false,
+    fade:true,
+
+    asNavFor:'.gallery-thumb'
+
+  });
+
+  $('.gallery-thumb').slick({
+
+    slidesToShow:5,
+    slidesToScroll:1,
+
+    asNavFor:'.gallery-main',
+
+    focusOnSelect:true,
+
+    arrows:false,
+    dots:false
+
+  });
+
+  // CLICK ẢNH -> MỞ MODAL
+$(".gallery-main img").click(function(){
+
+  let src=$(this).attr("src");
+
+  let modal=`
+
+  <div class="modal fade" id="photoModal">
+
+    <div class="modal-dialog modal-dialog-centered">
+
+      <div class="modal-content border-0 bg-transparent">
+
+        <img src="${src}"
+        style="width:100%;border-radius:5px;">
+
+      </div>
+
+    </div>
+
+  </div>`;
+
+  $("body").append(modal);
+
+  $("#photoModal").modal("show");
+
+  $("#photoModal").on("hidden.bs.modal",function(){
+
+    $(this).remove();
+
+  });
+
 });
 
-});
+};
+
+
 
 // hiệu ứng cuộn màn hình=============================================================
 document.addEventListener("DOMContentLoaded", function () {
@@ -124,68 +155,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-// Hiệu ứng cứng hoa đào rơi toàn màn hình ================================================
-// const canvas = document.getElementById("petal-canvas");
-// const ctx = canvas.getContext("2d");
 
-// let petals = [];
-
-// function resizeCanvas() {
-//   canvas.width = window.innerWidth;
-//   canvas.height = window.innerHeight;
-// }
-
-// resizeCanvas();
-// window.addEventListener("resize", resizeCanvas);
-
-// // tạo cánh hoa
-// function createPetal() {
-//   return {
-//     x: Math.random() * canvas.width,
-//     y: Math.random() * canvas.height,
-//     size: Math.random() * 6 + 4,
-//     speedY: Math.random() * 1 + 0.5,
-//     speedX: Math.random() * 0.5 - 0.25,
-//     angle: Math.random() * Math.PI * 2
-//   };
-// }
-
-// // tạo nhiều cánh hoa
-// for (let i = 0; i < 25; i++) {
-//   petals.push(createPetal());
-// }
-
-// // vẽ cánh hoa
-// function drawPetal(p) {
-//   ctx.beginPath();
-//   ctx.fillStyle = "#f8c8dc";
-//   ctx.moveTo(p.x, p.y);
-//   ctx.ellipse(p.x, p.y, p.size, p.size / 2, p.angle, 0, Math.PI * 2);
-//   ctx.fill();
-// }
-
-// // animate
-// function animate() {
-//   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-//   petals.forEach(p => {
-//     p.y += p.speedY;
-//     p.x += p.speedX;
-//     p.angle += 0.01;
-
-//     if (p.y > canvas.height) {
-//       p.y = -10;
-//       p.x = Math.random() * canvas.width;
-//     }
-
-//     drawPetal(p);
-//   });
-
-//   requestAnimationFrame(animate);
-// }
-
-// animate();
-// =============
 
 // Hiệu ứng cánh hoa rơi ở section đầu
 const canvas = document.getElementById("petal-canvas-hero");
@@ -276,35 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// HÌnh bàn tay-------------------------------------------------------------------
-// Opening Screen
-// const openingScreen = document.getElementById("opening-screen");
-// const mainContent = document.getElementById("main-content");
-
-// openingScreen.addEventListener("click", () => {
-
-//   openingScreen.style.opacity = "0";
-
-//   setTimeout(() => {
-
-//     openingScreen.style.display = "none";
-
-//     mainContent.style.display = "block";
-
-//     // bật nhạc
-//     const music = document.getElementById("bg-music");
-
-//     if(music){
-
-//       music.muted = false;
-//       music.play();
-
-//     }
-
-//   }, 1200);
-
-// });
-
+// Hình ảnh bàn tay=============================================================
 const openingScreen = document.getElementById("opening-screen");
 const mainContent = document.getElementById("main-content");
 
@@ -325,6 +267,15 @@ function openInvitation(){
     openingScreen.style.display = "none";
 
     mainContent.style.display = "block";
+
+    //KHỞI TẠO GALLERY SAU KHI CONTENT HIỆN RA
+
+    setTimeout(() => {
+
+      initGallery();
+
+    }, 100);
+    // =======
 
     // bật nhạc
     const music = document.getElementById("bg-music");
