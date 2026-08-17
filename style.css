@@ -302,6 +302,7 @@ color:#999;
 /* Hình section đầu------------------------------------------ */
 /* ảnh lớn phía trên */
 .hero-img{
+  margin-top: 30px;
   width:100%;
   overflow:hidden;
   border:1px solid #dbc5d1;
