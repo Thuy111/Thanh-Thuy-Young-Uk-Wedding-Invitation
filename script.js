@@ -5,7 +5,7 @@ $(function(){
 const music = document.getElementById("bg-music");
 const btn = document.getElementById("music-toggle");
 
-music.volume = 0.3;
+music.volume = 1.0;
 
 // khi người dùng chạm lần đầu ở bất kỳ đâu
 document.addEventListener("click", () => {
